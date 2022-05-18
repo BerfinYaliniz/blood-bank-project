@@ -1,0 +1,272 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="LoggedInMasterPage.master.cs" Inherits="Account_Pages_LoggedInMasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+
+               .auto-style1 {
+            width: 100%;
+            height: 54px;
+        }
+        *{
+            padding:0px;
+        }
+        
+
+
+        .auto-style4 {
+            width: 121px;
+            height: 120px;
+        }
+
+
+        .auto-style5 {
+            background-color: #FFFFFF;
+        }
+        .auto-style6 {
+            text-align: left;
+            color: #800000;
+            font-size: 40pt;
+            background-color: #FFFFFF;
+        }
+
+        .auto-style7 {
+            left: 444px;
+            top: 0px;
+            width: 99%;
+            height: 49px;
+        }
+        
+        .auto-style10 {
+            left: 0px;
+            top: 0px;
+            background-color: #800000;
+        }
+
+        .auto-style12 {
+            text-align: center;
+            width: 290px;
+        }
+        .auto-style13 {
+            width: 330px;
+        }
+        .auto-style14 {
+            left: 444px;
+            top: 0px;
+            width: 100%;
+            height: 49px;
+        }
+        .auto-style15 {
+            text-align: center;
+            width: 290px;
+            height: 86px;
+        }
+        .auto-style16 {
+            width: 290px;
+        }
+        .auto-style17 {
+            text-align: center;
+            width: 99%;
+            left: 444px;
+            top: 0px;
+            height: 49px;
+        }
+        .auto-style19 {
+            font-style: normal;
+        }
+        .auto-style20 {
+            font-style: normal;
+            font-weight: normal;
+        }
+
+        .auto-style22 {
+            color: #006600;
+        }
+        .auto-style23 {
+            color: #006600;
+            text-decoration: none;
+        }
+
+        .auto-style25 {
+            width: 290px;
+            color: #800000;
+            font-size: large;
+        }
+
+        .auto-style26 {
+            left: 605px;
+            top: 0px;
+            width: 98%;
+            height: 49px;
+        }
+
+        .footerStyle {
+            background-color: #800000;
+            color: #FFFFFF;
+            text-align: center;
+        }
+
+        </style>
+    <link href="../Style/StyleSheet.css" rel="stylesheet" />
+
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+            <asp:Panel ID="Panel1" runat="server">
+                <div id="nav" class="auto-style10" style="height: 42px;">
+                            <ul class="auto-style26">
+                                <li><a runat="server" href="~/Home.aspx"><span><strong>Login</strong></span></a></li>
+                                <li><a href="#"><strong>Blood Request</strong></a>
+                                    <ul>
+                                        <li><a runat="server" href="~/Request_Pages/BloodRequestList.aspx"><strong>All Request List</strong></a></li>
+                                        <li><a runat="server" href="~/Request_Pages/EditRequest.aspx"><strong>Edit Request</strong></a></li>
+                                    </ul>
+                                </li>
+                                <li><a runat="server" href="~/RequestForBlood.aspx"><strong>Request For Blood</strong></a></li>
+                                <li><a runat="server" href="~/AboutDonation.aspx"><strong>About Donation </strong></a></li>
+                               
+                            </ul>
+                        </div>
+            </asp:Panel>
+
+              <br />
+
+        <table class="auto-style1" style="border-style: solid; border-color: #800000;">
+            <tr>
+                <td class="auto-style5">
+                    <img alt="logo" class="auto-style4" src="~/Images/newdrop.jpg" runat="server" /></td>
+                <td class="auto-style6">&nbsp;&nbsp; Blood Donors Community</td>
+            </tr>
+        </table>
+       
+            <p>
+
+        <br />
+        </p>
+        <table class="auto-style14">
+            <tr>
+                <td style="border-style: hidden; border-color: #800000" class="auto-style13"><em>
+                    <strong>
+                    <span>
+                                <br />
+                                <br />
+                    
+                    <table align="center" style="border-style: solid; border-color: #800000">
+                        <tr>
+                            <td class="auto-style15" ><strong><em>
+                                <br />
+                                <span class="auto-style20">
+                                    <strong>
+                        <asp:Label ID="Label2" runat="server" CssClass="auto-style25" Text="Donor's Area"></asp:Label>
+                                       </strong>
+                                          <br />
+                    </span>
+                    </em></strong></td>
+                        </tr>
+                        <tr>
+                            <td class="auto-style12"> <span class="auto-style7"> <strong> <em>
+                                <br />
+                                </em></strong></span>
+                    </strong>
+                    </strong>
+                                <span class="auto-style7"> <em>
+                                <strong>
+                        <asp:HyperLink ID="EditLink" runat="server" CssClass="auto-style19" NavigateUrl="~/Account_Pages/EditProfile.aspx" style="text-decoration: none; color: #006600">Edit Profile</asp:HyperLink>
+                                <br />
+                                <br />
+                                </strong>
+                                </em></span>
+                    </em>
+                    </em>
+                    </em>
+                    </em>
+                                <span class="auto-style7"> <strong>
+                                <asp:HyperLink ID="HyperLink5" runat="server" CssClass="auto-style23" NavigateUrl="~/Account_Pages/PasswordEdit.aspx">Change Password</asp:HyperLink>
+                                <em>
+                                <br />
+                                </em></strong><em>
+                                <em>
+                                <em>
+                                <em>
+                    <strong>
+                            </em>
+                                <em>
+                            </em>
+                                <em>
+                            </em>
+                                <em>
+                            </td>
+                        </tr>
+                    </em>
+                    </strong>
+                        <strong>
+                        <tr>
+                            <td class="auto-style12"><em>
+                                <br />
+                    <span class="auto-style20">
+                                <span class="auto-style7"> 
+                                <strong> 
+                                <asp:HyperLink ID="HyperLink3" runat="server" CssClass="auto-style22" NavigateUrl="~/Account_Pages/AddDonation.aspx" style="color: #006600; text-decoration: none">Add Donation</asp:HyperLink>
+                                </strong>
+                                </span>
+                    </span>
+                                <br />
+                                </em>
+                                <br />
+                            </td>
+                        </tr>
+                        <em>
+                        <tr>
+                            <td class="auto-style17"> <em>
+                                <strong>
+                                <asp:HyperLink ID="HyperLink4" runat="server" CssClass="auto-style19" NavigateUrl="~/Account_Pages/DonationHistory.aspx" style="text-decoration: none; color: #006600">Donation History</asp:HyperLink>
+                                </strong>
+                        </em></td>
+                        </tr>
+                        <tr>
+                            <td class="auto-style12">&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td class="auto-style16"><strong><em>
+                    <span class="auto-style20">
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
+                    <asp:Button ID="LogOutButton" runat="server" OnClick="LogOutButton_Click" Text="Log Out" Height="27px" Width="140px" />
+                                <br />
+                                <br />
+                    </span>
+                    </em></strong></td>
+                        </tr>
+                    </table>
+                    
+                    <br />
+                    </em>
+                    </strong>
+                    </span>
+                    </td>
+                <td><asp:ContentPlaceHolder id="ContentPlaceHolder2" runat="server">
+        
+        </asp:ContentPlaceHolder></td>
+            </tr>
+        </table>
+
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+
+    </div>
+
+        <div class="clear"></div>
+        <div class="footer">
+           <h5 style="border: solid #800000" class="footerStyle">
+               2022,berfin yalınız
+           </h5>
+        </div>
+    </form>
+</body>
+</html>

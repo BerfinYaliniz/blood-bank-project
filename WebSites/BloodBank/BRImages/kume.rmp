@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<process version="5.1.011">
+ <context>
+   <input/>
+   <output/>
+   <macros />
+ </context>
+ <operator active="true" class="process" uyumluluğu="5.1.011" Expanded="true" name="Process">
+   <process Expanded="true" height="396" width= "751">
+     <operator active="true" class="read_excel" uyumluluk="5.1.011" genişletilmiş="true" height="60" name="Excel Oku" width="90" x="45" y ="75">
+       <parameter key="excel_file" value="C:\Users\hp\Desktop\tempclusterdel.xls"/>
+       <parameter key="imported_cell_range" value="A1:A54"/>
+       <parameter key="first_row_as_names" value= "yanlış"/>
+       <list key="annotations">
+         <parameter key="0" value="Ad"/>
+       </list>
+       <list key="data_set_meta_data_information">
+         <parameter key="0" value="Task.true.text. öznitelik"/>
+       </list>
+     </operator>
+     <operator active="true" class="generate_id" uyumluluk="5.1.011" genişletilmiş="true" height="76" name="Generate ID" width=" 90" x="71" y="142"/>
+     <operator active="true" class="multiply" uyumluluk="5.1.011" genişletilmiş="true" height="94" name="Multiply"width="90" x="112" y="210"/>
+     <operator active="true" class="nominal_to_numerical" uyumluluk="5.1.011" genişletilmiş="true" height="94" name="Nominal to Sayısal" width="90" x="179" y="30">
+       <list key="comparison_groups"/>
+     </operator>
+     <operator active="true" class="multiply" uyumluluk="5.1.011" genişletilmiş="true" height="94" name="Çarpma (2)" width="90" x="312" y="94"/>
+     <operator active="true" class="k_means" uyumluluk="5.1.011" genişletilmiş="true" height="76" name="Kümeleme " width="90" x="447" y="75">
+       <parameter key="k" value="4"/>
+     </operator>
+     <operator active="true" class="join" uyumluluğu=" 5.1.011" genişletilmiş="doğru"height="76" name="Join" width="90" x="514" y="210">
+       <list key="key_attributes"/>
+     </operator>
+     <connect from_op="Excel Oku" from_port=" çıktı" to_op="Kimlik Oluştur" to_port="örnek küme girişi"/>
+     <connect from_op="Generate ID" from_port="example set output" to_op="Multiply" to_port="input"/>
+     <connect from_op="Multiply" from_port="output 1" to_op="Nominal - Sayısal" to_port=" örnek set girişi"/>
+     <connect from_op="Multiply" from_port="output 2" to_op="Join" to_port="left"/>
+     <connect from_op="Nominal - Sayısal" from_port="örnek set çıktısı" to_op=" Çarp (2)" to_port="input"/>
+     <connect from_op="Çarpma (2)" from_port="output 1" to_op="Kümeleme" to_port="örnek küme"/>
+     <connect from_op="Çarpma (2) "from_port="output 2" to_port="sonuç 3"/>
+     <connect from_op="Kümeleme" from_port="küme modeli" to_port="sonuç 2"/>
+     <connect from_op="Kümeleme" from_port="kümelenmiş küme" to_op="Join" to_port="right"/>
+     <connect from_op="Join" from_port="join" to_port="result 1"/>
+     <portSpacing port=" source_input 1" space="0"/>
+     <portSpacing port="sink_result 1" space="0"/>
+     <portSpacing port="sink_result 2" space="0"/>
+     <portSpacing port="sink_result 3" space= "0"/>
+     <portSpacing port="sink_result 4" space="0"/>
+   </process>
+ </operator>
+</process>

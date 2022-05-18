@@ -1,0 +1,134 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+
+    </asp:ContentPlaceHolder>
+
+
+    <style type="text/css">
+        .auto-style1 {
+            width: 100%;
+            height: 120px;
+        }
+        .auto-style2 {
+            width: 223px;
+            height: 127px;
+        }
+        .auto-style3 {
+            height: 127px;
+            font-size: 38pt;
+            color: #CC0000;
+        }
+        .auto-style4 {
+            width: 121px;
+            height: 120px;
+        }
+
+
+        .auto-style5 {
+            left: 21px;
+            top: 4px;
+            width: 94%;
+            height: 96px;
+        }
+        *{
+            padding:0px;
+        }
+        
+
+
+        .auto-style6 {
+            left: 19px;
+            top: -3px;
+        }
+        
+
+
+        .auto-style7 {
+            font-size: medium;
+        }
+        .auto-style8 {
+            text-align: center;
+        }
+        
+
+
+    </style>
+    
+    <link href="Style/StyleSheet.css" rel="stylesheet" />
+
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <table class="auto-style1" style="border-style: solid; border-color: #CC0000;">
+            <tr>
+                <td class="auto-style2">
+                    <img alt="logo" class="auto-style4" src="~/Images/newdrop.jpg" runat="server" /></td>
+                <td class="auto-style3" style=" text-align:center">Blood Bank </td>
+            </tr>
+        </table>
+       
+        <div>
+        <div id="nav" class="auto-style6">
+              <ul class="auto-style5">
+                 <li class="auto-style7"> <a href="~/Home.aspx" runat="server"><strong>Home</strong></a></li>
+                  
+                  <li> <a href="~/DonorsByDistrict.aspx" runat="server"><strong>All Donors List</strong></a></li>
+                   
+                 <li> <strong><span class="auto-style7"> <a href="#">Donors By Group</a>
+
+                     <ul>
+                    
+                     <li> <a href="~/DonorListByGroup/A_positive.aspx" runat="server"><strong>A positive (+)</strong></a></li>
+                     <li> <a href="~/DonorListByGroup/A_negative.aspx" runat="server"><strong>A negative (-)</strong></a></li>
+                     <li> <a href="~/DonorListByGroup/B_positive.aspx" runat="server"><strong>B positive (+)</strong></a></li>
+                     <li> <a href="~/DonorListByGroup/B_negative.aspx" runat="server"><strong>B negative (-)</strong></a></li>
+                     <li> <a href="~/DonorListByGroup/AB_positive.aspx" runat="server"><strong>AB positive (+)</strong></a></li>
+                     <li> <a href="~/DonorListByGroup/AB_negative.aspx" runat="server"><strong>AB negative (-)</strong></a></li>
+                     <li> <a href="~/DonorListByGroup/O_positive.aspx" runat="server"><strong>O positive (+)</strong></a></li>
+                     <li> <a href="~/DonorListByGroup/O_negative.aspx" runat="server"><strong>O negative (-)</strong></a></li>
+                     </ul>
+                 </li>
+                            
+                            
+                 <li> <a href="#"><strong>Blood Request</strong></a>
+                     <ul>
+                    
+                     <li> <a href="~/Request_Pages/BloodRequestList.aspx" runat="server"><strong>All Request List</strong></a></li>
+                     <li> <a href="~/Request_Pages/EditRequest.aspx" runat="server"><strong>Edit Request</strong></a></li>
+                    
+                     </ul>
+                 </li>
+                            
+                            
+                 <li> <a href="~/AboutDonation.aspx" runat="server"><strong>About Blood Donation </strong></a></li>
+
+                            
+                         </ul>
+                    </div>
+               </div>
+
+        <br />
+
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+            
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    
+        <div class="clear"></div>
+        <div class="footer">
+           <h5 class="auto-style8">
+               2022, Blood Banking by Berfin Yalınız
+           </h5>
+        </div>
+    </form>
+</body>
+</html>

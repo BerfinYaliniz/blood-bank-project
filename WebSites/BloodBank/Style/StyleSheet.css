@@ -1,0 +1,56 @@
+﻿        
+        
+        
+        #nav
+        {  
+            position:relative;
+            margin:0px;
+            padding:0px;
+           
+        }
+        #nav ul
+        {   
+            list-style:none;
+            width:100%;
+            position:relative;
+            height:42px;
+            border:none;
+           
+        }
+        #nav ul li
+        {   
+            background-color:maroon;
+            border: solid 1px darkred;
+            width: 160px;
+            height:40px;
+            float:left;
+            text-align: center;
+            line-height:40px;
+            margin:0px;
+            position:relative;
+        }
+        #nav ul li a
+        {
+            display: block;
+            text-decoration:none;
+            color:white;
+             
+        }
+        #nav ul li a:hover
+        {
+            display: block;
+            color:white;
+            background-color:black;
+        }
+        #nav ul ul
+        {   
+            position:absolute;
+            display: none;
+            
+        }
+
+        #nav ul li:hover ul
+        {
+            display: block;
+            
+        }
